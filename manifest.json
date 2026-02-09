@@ -1,0 +1,57 @@
+{
+  "manifest_version": "2",
+  "api_version": "2.0",
+  "required_api_version": "2.0",
+  "name": "Jira Create",
+  "description": "Create Jira Cloud issues via a form (yad) launched from Ulauncher",
+  "developer_name": "Jader",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.2
+  },
+  "preferences": [
+    {
+      "id": "ui_backend",
+      "type": "select",
+      "name": "UI backend",
+      "description": "Choose the UI implementation",
+      "default_value": "gtk",
+      "options": ["gtk", "yad"]
+    },
+    {
+      "id": "jira_keyword",
+      "type": "keyword",
+      "name": "Jira Create",
+      "description": "Keyword to open Jira Create form",
+      "default_value": "jira"
+    },
+    {
+      "id": "base_url",
+      "type": "input",
+      "name": "Jira Base URL",
+      "description": "Example: https://yourdomain.atlassian.net",
+      "default_value": ""
+    },
+    {
+      "id": "email",
+      "type": "input",
+      "name": "Jira Email",
+      "description": "Jira Cloud account email (for API token basic auth)",
+      "default_value": ""
+    },
+    {
+      "id": "api_token",
+      "type": "input",
+      "name": "Jira API Token",
+      "description": "Atlassian API token",
+      "default_value": ""
+    },
+    {
+      "id": "default_project_key",
+      "type": "input",
+      "name": "Default Project Key (optional)",
+      "description": "Example: PROJ (if set, it will be pre-filled in the form)",
+      "default_value": ""
+    }
+  ]
+}
